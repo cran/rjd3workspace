@@ -8,12 +8,25 @@ to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
 
+### Fixed
+
+* `get_point_specification()` fails when estimation is NULL [#108](https://github.com/rjdverse/rjd3workspace/issues/108)
+* Bug when refreshing a workspace without raw-data path in examples
+
+### Removed
+
+* `get_active_specification()`
+
+
+## [3.7.1] - 2026-04-03
+
 ### Changed
 
 * Use `get_java_version()` instead of `.jversion`
 
 ### Added
 
+* First release on [CRAN](https://cran.r-project.org/package=rjd3workspace)
 * New function `get_domain_specification()`, `get_point_specification()`, `get_active_specification()` and `get_estimation_specification()` to extract the domain, point, active and estimation specfification.
 * New function `get_results()` to extract the results from a SA-Item
 
@@ -24,7 +37,7 @@ to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 * New function `set_metadata()` to copy the metadata from another SAItem
 * New function `put_metadata()` to update a SAI with any metadata (key, value)
-* Residuals are available #3
+* Residuals are available [#3](https://github.com/rjdverse/rjd3workspace/issues/3)
 
 ### Deprecated
 
@@ -32,7 +45,7 @@ to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ### Changed
 
-* `write_calendars()` accepts now multiple calendars #95
+* `write_calendars()` accepts now multiple calendars [#95](https://github.com/rjdverse/rjd3workspace/issues/95)
 * New JARS related to version [3.6.0](https://github.com/jdemetra/jdplus-main/releases/tag/v3.6.0)
 
 
@@ -173,7 +186,8 @@ to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 * New JARS related to version [3.1.0](https://github.com/jdemetra/jdplus-main/releases/tag/v3.1.0)
 
 
-[Unreleased]: https://github.com/rjdverse/rjd3workspace/compare/v3.6.0...HEAD
+[Unreleased]: https://github.com/rjdverse/rjd3workspace/compare/v3.7.1...HEAD
+[3.7.1]: https://github.com/rjdverse/rjd3workspace/compare/v3.6.0...v3.7.1
 [3.6.0]: https://github.com/rjdverse/rjd3workspace/compare/v3.5.1...v3.6.0
 [3.5.1]: https://github.com/rjdverse/rjd3workspace/compare/v3.5.0...v3.5.1
 [3.5.0]: https://github.com/rjdverse/rjd3workspace/compare/v3.2.4...v3.5.0
