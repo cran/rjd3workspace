@@ -5,8 +5,29 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), and this project adheres
 to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-
 ## [Unreleased]
+
+### Changed
+
+* `add_variables` uses `complete_modelling_context` from {rjd3toolkit}, corrects wrong names and accepts `mts`, `JD3_TS`, `JD3_TSCOLLECTION` and `JD3_DYNAMICTS` objects [#148](https://github.com/rjdverse/rjd3toolkit/issues/148)
+- Updated JARS from jdplus-main to [3.9.0](https://github.com/jdemetra/jdplus-main/releases/tag/v3.9.0)
+
+### Deprecated
+
+* Function `.jsai_jresults()` is deprecated. Please use function `jsai_jresults()` instead. [#88](https://github.com/rjdverse/rjd3workspace/issues/88)
+* Function `.jsai_results()` is deprecated. Please use function `jsai_results()` instead. [#88](https://github.com/rjdverse/rjd3workspace/issues/88)
+
+### Added
+
+* New `verbose` argument in `write_calendars` and document behavious when the list of calendars is not named [#92](https://github.com/rjdverse/rjd3workspace/issues/92)
+* New message in `write_calendars` when the single calendar is not named (and renamed in `"cal"`) [#101](https://github.com/rjdverse/rjd3workspace/issues/101)
+
+### Fixed
+
+* Relative paths are accepted for `regarima_read_spec()`, `tramo_read_spec()`, `tramoseats_read_spec()` and `x13_read_spec()` [#91](https://github.com/rjdverse/rjd3workspace/issues/91)
+* `save_workspace` generates a warning when a workspace already exists and `replace = FALSE` (the default)  [#105](https://github.com/rjdverse/rjd3workspace/issues/105)
+
+## [3.8.0] - 2026-07-17
 
 ### Fixed
 
@@ -16,7 +37,6 @@ to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 ### Removed
 
 * `get_active_specification()`
-
 
 ## [3.7.1] - 2026-04-03
 
@@ -29,7 +49,6 @@ to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 * First release on [CRAN](https://cran.r-project.org/package=rjd3workspace)
 * New function `get_domain_specification()`, `get_point_specification()`, `get_active_specification()` and `get_estimation_specification()` to extract the domain, point, active and estimation specfification.
 * New function `get_results()` to extract the results from a SA-Item
-
 
 ## [3.6.0] - 2025-12-01
 
@@ -47,7 +66,6 @@ to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 * `write_calendars()` accepts now multiple calendars [#95](https://github.com/rjdverse/rjd3workspace/issues/95)
 * New JARS related to version [3.6.0](https://github.com/jdemetra/jdplus-main/releases/tag/v3.6.0)
-
 
 ## [3.5.1] - 2025-06-19
 
@@ -73,11 +91,9 @@ to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 * Simplified the modification of path in `update_path()`
 * New JARS related to version [3.5.1](https://github.com/jdemetra/jdplus-main/releases/tag/v3.5.1)
 
-
 ### Removed
 
 * `add_variable()` is removed. Please use now `add_variables()`
-
 
 ## [3.5.0] - 2025-04-10
 
@@ -91,8 +107,11 @@ to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 * Rename the argument `ref_jsa` in `ref_jsai` in `set_ts_metadata()`
 * New JARS related to version [3.5.0](https://github.com/jdemetra/jdplus-main/releases/tag/v3.5.0)
 
+### Fixed
 
-### Deprecated 
+* `set_reference_specification()` doesn't change the SAI name [#55](https://github.com/rjdverse/rjd3workspace/issues/55)
+
+### Deprecated
 
 * Function `.jws_open()` is deprecated. Please use function `jws_open()` instead.
 * Function `.jsap_name()` is deprecated. Please use function `sap_name()` instead.
@@ -133,7 +152,6 @@ to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 * `.jws_multiprocessing_count()` is removed. Please use now `ws_sap_count()`
 * `.jws_multiprocessing_new()` is removed. Please use now `jws_sap_new()`
 
-
 ## [3.2.4] - 2025-02-04
 
 ### Fixed
@@ -150,13 +168,11 @@ to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 * New JARS related to version [3.2.4](https://github.com/jdemetra/jdplus-main/releases/tag/v3.2.4)
 
-
 ## [3.2.3] - 2024-07-12
 
 ### Changed
 
 * New JARS related to version [3.2.3](https://github.com/jdemetra/jdplus-main/releases/tag/v3.2.3)
-
 
 ## [3.2.2] - 2024-03-15
 
@@ -164,13 +180,11 @@ to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 * New JARS related to version [3.2.2](https://github.com/jdemetra/jdplus-main/releases/tag/v3.2.2)
 
-
 ## [3.2.1] - 2023-12-12
 
 ### Changed
 
 * New JARS related to version [3.2.1](https://github.com/jdemetra/jdplus-main/releases/tag/v3.2.1)
-
 
 ## [3.2.0] - 2023-11-24
 
@@ -178,15 +192,14 @@ to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 * New JARS related to version [3.2.0](https://github.com/jdemetra/jdplus-main/releases/tag/v3.2.0)
 
-
 ## [3.1.0] - 2023-08-11
 
 ### Added
 
 * New JARS related to version [3.1.0](https://github.com/jdemetra/jdplus-main/releases/tag/v3.1.0)
 
-
-[Unreleased]: https://github.com/rjdverse/rjd3workspace/compare/v3.7.1...HEAD
+[Unreleased]: https://github.com/rjdverse/rjd3workspace/compare/v3.8.0...HEAD
+[3.8.0]: https://github.com/rjdverse/rjd3workspace/compare/v3.7.1...v3.8.0
 [3.7.1]: https://github.com/rjdverse/rjd3workspace/compare/v3.6.0...v3.7.1
 [3.6.0]: https://github.com/rjdverse/rjd3workspace/compare/v3.5.1...v3.6.0
 [3.5.1]: https://github.com/rjdverse/rjd3workspace/compare/v3.5.0...v3.5.1
